@@ -1,16 +1,15 @@
 import React from 'react'
 
 import './App.css'
-import logIn from './LogInComponents/logIn.js'
-import Register from './LogInComponents/Register.js'
-import Routes from './Routes'
+import LogInNew from './LogInComponents/LogInNew'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
     
-       <Routes/>
+       <LogInNew/>
       </header>
     </div>
   )
