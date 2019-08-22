@@ -1,15 +1,14 @@
 import React from 'react'
 
 import './App.css'
-import LogInNew from './LogInComponents/LogInNew'
-
+import Menu from 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
     
-       <LogInNew/>
+       <Menu/>
       </header>
     </div>
   )

@@ -1,4 +1,7 @@
 import React from 'react'
+import LoggedInAs from '../LoggedInAs';
+import store,{saveUsername} from '../redux/store'
+
 
 class LogInNew extends React.Component{
     constructor(){
@@ -28,8 +31,14 @@ class LogInNew extends React.Component{
             onChange={this.onInputChange} id = 'password' placeholder='password' type='password'/>
             <br/>
             <button
-            onClick={this.displayUserInput} id = 'login'>Log in</button>
-        </div>)
+            onClick={()=>store.dispatch(saveUsername(this.state.username))} 
+            id = 'login'>
+                Log in
+                </button>
+           
+            <LoggedInAs />
+        </div>
+        )
     }
 
     }

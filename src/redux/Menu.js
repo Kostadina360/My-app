@@ -16,6 +16,9 @@ const Menu=()=> {
         <li id='login'>
             <Link to='/login'> Log in</Link>
         </li>
+        <li id='favorite'>
+            <Link to='/fav'> Favorite</Link>
+        </li>
 </ul>
 }
 
