@@ -2,8 +2,9 @@ import React from 'react'
 import logIn from './LogInComponents/logIn'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './redux/Menu'
-import LoggedInAs from './LoggedInAs';
-import Favorites from './redux/Favorites'
+import LoggedInAs from './LoggedInAs.js';
+import Favorites from '../Recepies/Favorites.js';
+import Recepies from './Recepies/Recepies.js';
 
 
 
@@ -12,9 +13,10 @@ return (
     <Router>
         <Menu/>
         <Switch>
-            <Route exact path='/' component={null}/>
+            <Route exact path='/' component={Recepies}/>
             <Route exact path='/main' component={LoggedInAs}/> 
             <Route exact path='/fav' component={Favorites}/>
+            <Route exact path='/menu' component={Menu}/> 
             <Route exact component={PathError}/>
             
         </Switch>

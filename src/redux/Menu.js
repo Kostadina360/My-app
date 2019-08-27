@@ -4,10 +4,7 @@ import {Link} from 'react-router-dom'
 const Menu=()=> {
 
     return <ul>
-        <li id= 'home'>
-            <Link to='/'>Home</Link>
-        </li>
-        <li id='about'>
+         <li id='about'>
             <Link to='/about'> About</Link>
         </li>
         <li id='contact'>
