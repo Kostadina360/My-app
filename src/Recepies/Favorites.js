@@ -7,6 +7,7 @@ const Favorites = (props)=> {
     const components=props.favorites.recepies.map(element)
     return   <SingleRecepie 
         key={element.key}
+        id={element.id}
         description={element.description}/>
 }
 
@@ -20,7 +21,7 @@ if(components.lenght<1){
 
 function mapStateToProps(state){
     return{
-        favorites: state.favorites
+        favorites: state.favorites.recepies
     }
 }
 

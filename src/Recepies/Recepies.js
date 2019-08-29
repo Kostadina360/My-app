@@ -7,30 +7,30 @@ import store from '../redux/store'
 
 
 class Recepies extends React.Component {
-    /*  componentWillMount(){store.dispatch(fetchRecepies())}
-      render(){
+    /*  componentWillMount(){store.dispatch(fetchRecepies())}*/
+    constructor(){
+      super()
+      this.state={
+            recepies:[], error:null
+      }
+} 
+    
+    render(){
       const components=this.props.recepies.map((element)=>{
             return   <SingleRecepie 
+            action= 'add'
             key={element.id}
+            id={element.id}
             description={element.title}/>
       })
-      */
 
-      constructor(){
-            super()
-            this.state={
-                  recepies:[], error:null
-            }
-      }
-      if(components.length<1){
-            return<div>Loading..</div>
-            else{
-                  return <div id='recepies' className='flex-container'> {components} </div>
-            }
-                
-      }
+          
+      if(components.length < 1){
+            return<div>Loading..</div>}
+            else return <div id='recepies' className='flex-container'> {components} </div>
       }
 }
+
 
      /*} <SingleRecepie  description= {data[0].description}/>
       <SingleRecepie description= {data[1].description}/>
@@ -43,11 +43,8 @@ class Recepies extends React.Component {
     
 
 function mapStateToProps(state){
-      return
-           {
-            recepies: state.recepies.recepies
-           }
-      
+      return {recepies: state.recepies.recepies,
+      isBusy: state.recepies.isBusy }
 }
 
 export default connect(mapStateToProps)(Recepies)
